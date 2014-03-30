@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+
+<body>
+
+<style type="text/css" >
+  #shm-classification fieldset {
+  				border-top: 1px solid #cccccc;
+                border-left: 1px solid #cccccc;
+                border-right: 1px solid #cccccc;
+                border-bottom: 1px solid #cccccc;
+  }
+</style>
+        
+<div id="shm-classification" >
+
+<table><tr>
+
+<td tal:condition="python:context.portal_type in ['shmresearch.article',]"
+    style="width: 33%;" >
+<fieldset style="height: 16em" >
+   <legend>Study Qualification</legend>
+   
+      <div tal:condition="context/publication_type | nothing" >
+        <strong i18n:translate="">
+          Publication type:
+        </strong>
+        <span tal:replace="context/publication_type" />
+      </div>
+   
+      <!-- div tal:condition="python:len(context.publication_type)" >
+        <strong i18n:translate="">
+          Characteristics:
+        </strong>
+        <span tal:replace="python: ', '.join(context.disease_and_health_condition_categories)" />
+      </div -->
+      
+      <!-- div tal:condition="context/publication_type | nothing" >
+        <strong i18n:translate="">
+          Publication type:
+        </strong>
+        <span tal:replace="context/publication_type" />
+      </div -->
+      
+</fieldset>
+</td>
+
+<td style="width: 33%;" >
+<fieldset style="height: 16em"  >
+   <legend>Specialties - Disease and Health Condition</legend>
+   
+      <div tal:define="hasField python:hasattr(context, 'specialities')" >
+        <strong i18n:translate="">
+          Specialties:
+        </strong>
+        <span tal:replace="python:hasField and ', '.join(context.specialities) or 'N/A'" />
+      </div>
+
+      <div tal:define="hasField python:hasattr(context, 'disease_and_health_condition_categories')" >
+        <strong i18n:translate="">
+          Categories:
+        </strong>
+        <span tal:replace="python:hasField and ', '.join(context.disease_and_health_condition_categories) or 'N/A'" />
+      </div>
+
+      <div tal:define="hasField python:hasattr(context, 'levels_of_prevention')" >
+        <strong i18n:translate="">
+          Levels of prevention:
+        </strong>
+        <span tal:replace="python:hasField and ', '.join(context.levels_of_prevention) or 'N/A'" />
+      </div>
+      
+      <!-- Here we have the Standard DC 'Subject' metadata (on all our content objects) -->
+      <div>
+        <strong i18n:translate="">
+          MeSH Keywords:
+        </strong>
+        <span tal:replace="python:', '.join(context.Subject())" />
+      </div>
+
+      <div tal:define="hasField python:hasattr(context, 'substances')" >
+        <strong i18n:translate="">
+          Substances:
+        </strong>
+        <span tal:replace="python:hasField and ', '.join(context.substances) or 'N/A'" />
+      </div>
+
+      <div tal:define="hasField python:hasattr(context, 'topics')" >
+        <strong i18n:translate="">
+          Topics:
+        </strong>
+        <span tal:replace="python:hasField and ', '.join(context.topics) or 'N/A'" />
+      </div>
+
+</fieldset>
+</td>
+
+<td style="width: 33%;" >
+<fieldset style="height: 16em" >
+   <legend>Target Population</legend>
+
+      <div tal:define="hasField python:hasattr(context, 'target_population_age_groups')" >
+        <strong i18n:translate="">
+          Age groups:
+        </strong>
+        <span tal:replace="python:hasField and ', '.join(context.target_population_age_groups) or 'N/A'" />
+      </div>
+
+      <div tal:define="hasField python:hasattr(context, 'target_population_sex_categories')" >
+        <strong i18n:translate="">
+          Sex categories:
+        </strong>
+        <span tal:replace="python:hasField and ', '.join(context.target_population_sex_categories) or 'N/A'" />
+      </div>
+      
+</fieldset>
+</td>
+
+</tr></table>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object name="portal_types" meta_type="Plone Types Tool">
+
+  <object name="shmresearch.organizationcontainer" meta_type="Dexterity FTI"/> 
+  <object name="shmresearch.organization" meta_type="Dexterity FTI"/>
+
+  <object name="shmresearch.revuecontainer" meta_type="Dexterity FTI"/>    
+  <object name="shmresearch.revue" meta_type="Dexterity FTI"/>
+  
+  <object name="shmresearch.pressecontainer" meta_type="Dexterity FTI"/> 
+  <object name="shmresearch.presse" meta_type="Dexterity FTI"/>
+  
+  <object name="shmresearch.competitorcontainer" meta_type="Dexterity FTI"/>  
+  <object name="shmresearch.competitor" meta_type="Dexterity FTI"/>
+  <object name="shmresearch.competitorproduct" meta_type="Dexterity FTI"/>
+
+  <object name="shmresearch.articlecontainer" meta_type="Dexterity FTI"/>  
+  <object name="shmresearch.article" meta_type="Dexterity FTI"/>
+  
+  <object name="shmresearch.questionnairecontainer" meta_type="Dexterity FTI"/>
+  <object name="shmresearch.questionnaire" meta_type="Dexterity FTI"/>
+
+  <object name="shmresearch.marketingkitcontainer" meta_type="Dexterity FTI"/>
+  <object name="shmresearch.marketingkit" meta_type="Dexterity FTI"/>
+  
+</object>

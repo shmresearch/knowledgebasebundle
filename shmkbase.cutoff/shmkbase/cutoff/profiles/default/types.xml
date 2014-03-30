@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object name="portal_types" meta_type="Plone Types Tool">
+
+  <object name="shmresearch.cutoffitemcontainer" meta_type="Dexterity FTI"/>
+  <object name="shmresearch.cutoffitem" meta_type="Dexterity FTI"/>
+  
+  <object name="shmresearch.definitionitemcontainer" meta_type="Dexterity FTI"/>
+  <object name="shmresearch.definitionitem" meta_type="Dexterity FTI"/>
+
+</object>

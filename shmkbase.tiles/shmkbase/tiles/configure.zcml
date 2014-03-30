@@ -1,0 +1,101 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="shmresearch.knowledgebase">
+      
+  <!-- Include configuration for dependencies listed in setup.py -->
+  <includeDependencies package="." />
+  
+    <grok:grok package="."/>
+
+    <plone:tile
+        name="shmkbase.tiles.classification"
+        title="SHMKBase classification tile"
+        description='A tile containing classification data'
+        add_permission="zope.Public"
+        for="*"
+        class=".classification.ContentClassificationTile"
+        permission="zope2.View"
+        template="templates/classification.pt"
+        />
+      
+    <plone:tile
+        name="shmkbase.tiles.relateditems"
+        title="SHMKBase relateditems tile"
+        description='A tile displaying related items'
+        add_permission="zope.Public"
+        for="*"
+        class=".related.RelatedItemsTile"
+        permission="zope2.View"
+        template="templates/relateditems.pt"
+        />
+        
+    <plone:tile
+        name="shmkbase.tiles.relatedcompetitorproducts"
+        title="SHMKBase related competitor products tile"
+        description='A tile displaying competitor products'
+        add_permission="zope.Public"
+        for="*"
+        class=".related.RelatedCompetitorProductsTile"
+        permission="zope2.View"
+        template="templates/relatedproducts.pt"
+        />
+        
+    <plone:tile
+        name="shmkbase.tiles.weburls"
+        title="SHMKBase weburls tile"
+        description='A tile displaying web urls'
+        add_permission="zope.Public"
+        for="*"
+        class=".weburls.WebUrlsTile"
+        permission="zope2.View"
+        template="templates/weburls.pt"
+        />
+        
+<!--
+    <plone:tile
+        name="shmkbase.tiles.classification"
+        title="SHMKBase classification tile"
+        description='A tile containing classification data'
+        add_permission="zope.Public"
+        for="*"
+        class=".classification.ContentClassificationTile"
+        permission="zope2.View"
+        template="templates/document_byline.pt"
+        />
+        
+    <browser:page
+      for="*"
+      name="twocolumnfooter_document_view"
+      template="twocolumnfooter.pt"
+      permission="zope2.View"
+      layer=".interfaces.ISHMKBaseTilesLayer"
+      />
+
+    <browser:resource
+      name="shmkbase.tiles.css"
+      file="shmkbase.tiles.css"
+      layer=".interfaces.ISHMKBaseTilesLayer"
+      />
+
+    <browser:resource
+      name="shmkbase.tiles.js"
+      file="shmkbase.tiles.js"
+      layer=".interfaces.ISHMKBaseTilesLayer"
+      />
+
+-->
+
+    <genericsetup:registerProfile
+        name="default"
+        title="shmkbase.tiles"
+        directory="profiles/default"
+        description="shmkbase.tiles"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+</configure>

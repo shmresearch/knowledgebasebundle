@@ -1,0 +1,4 @@
+<layers>
+    <layer name="shmresearch.knowledgebase"
+           interface="shmresearch.knowledgebase.browser.interfaces.IThemeSpecific" />
+</layers>

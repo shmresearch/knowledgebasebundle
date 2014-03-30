@@ -1,0 +1,40 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="shmresearch.knowledgebase">
+      
+
+    <!-- Include configuration for dependencies listed in setup.py -->
+    <includeDependencies package="." />
+
+    <!-- Temp. include those who are not yet added as eggs, and this in the setup.py -->
+    <include package="collective.z3cform.widgets" />
+    <include package="collective.z3cform.addablechoice" />
+    
+    <include package=".browser" />
+  
+    <!--
+    <include package="plone.behavior" file="meta.zcml" />
+    <include package="plone.directives.form" file="meta.zcml" />
+    <include package="plone.directives.form" />
+    <include package="plone.app.relationfield" />
+    -->
+    
+    <grok:grok package="."/>
+
+    <!-- adapter name="start" factory=".behaviors.start_indexer" / -->
+    <!-- adapter name="end" factory=".behaviors.end_indexer" / -->
+      
+    <genericsetup:registerProfile
+        name="default"
+        title="shmresearch.knowledgebase"
+        directory="profiles/default"
+        description="shmresearch.knowledgebase types and app logic."
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+</configure>

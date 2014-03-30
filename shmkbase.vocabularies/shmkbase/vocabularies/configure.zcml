@@ -1,0 +1,56 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="shmkbase.vocabularies">
+
+    <!-- include package=".browser" / -->
+
+    <grok:grok package="."/>
+
+      
+  <utility
+      component=".Countries"
+      name="shmresearch.knowledgebase.Countries"
+      />
+
+  <utility
+      component=".Years"
+      name="shmresearch.knowledgebase.Years"
+      />
+      
+  <utility
+      component=".LatestYears"
+      name="shmresearch.knowledgebase.LatestYears"
+      />
+      
+  <utility
+      component=".Specialities"
+      name="shmresearch.knowledgebase.Specialities"
+      />
+
+  <!-- utility
+      component=".ArticleTypes"
+      name="shmresearch.knowledgebase.ArticleTypes"
+      / -->
+      
+  <!-- utility
+      component=".CompetitorTypes"
+      name="shmresearch.knowledgebase.CompetitorTypes"
+      / -->
+      
+      
+      
+    <!-- genericsetup:registerProfile
+        name="default"
+        title="shmkbase.cutoff"
+        directory="profiles/default"
+        description="shmkbase.cutoff types and app logic."
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        / -->
+
+
+</configure>

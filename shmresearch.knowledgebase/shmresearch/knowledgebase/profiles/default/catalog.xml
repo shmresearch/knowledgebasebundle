@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<object name="portal_catalog">
+    <index name="specialties" meta_type="KeywordIndex">
+        <indexed_attr value="specialities"/>
+    </index>
+    <column value="specialities"/>
+    
+    <index name="product_market_sector" meta_type="FieldIndex">
+        <indexed_attr value="product_market_sector"/>
+    </index>
+    <column value="product_market_sector"/>
+    
+    <index name="product_category" meta_type="FieldIndex">
+        <indexed_attr value="product_category"/>
+    </index>
+    <column value="product_category"/>
+</object>

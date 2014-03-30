@@ -1,0 +1,140 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="shmkbase.behaviors">
+
+    <include package="Products.remotefolder" />
+
+    <!-- include package=".browser" / -->
+
+    <grok:grok package="."/>
+        
+    <plone:behavior
+        title="Related Publications"
+        description="Related Publications schema for Cutoffs and others."
+        provides=".related.IRelatedPublications"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+    <plone:behavior
+        title="Communication Material"
+        description="Communication Material schema."
+        provides=".business.ICommunicationMaterial"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+    <plone:behavior
+        title="Countries"
+        description="Countries schema."
+        provides=".location.ICountries"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+        
+    <plone:behavior
+        title="General Categorization"
+        description="General Categorization schema."
+        provides=".categorization.IGeneralCategorization"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+    <plone:behavior
+        title="Study Qualification"
+        description="Study Characteristics Categorization schema."
+        provides=".categorization.IStudyCharacteristicsCategorization"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+        
+    <plone:behavior
+        title="DiseaseAndHealthCondition Categorization"
+        description="DiseaseAndHealthCondition Categorization schema."
+        provides=".categorization.IDiseaseAndHealthConditionCategorization"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+    <plone:behavior
+        title="Target Population Categorization"
+        description="Target Population Categorization schema."
+        provides=".categorization.ITargetPopulation"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+        
+    <plone:behavior
+        title="Bibliographic Reference"
+        description="Biblio Reference schema for Articles and others."
+        provides=".biblioref.IBiblioReference"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+        
+        
+    <plone:behavior
+        title="Remote Content Provider"
+        description="RemoteContentProvider schema."
+        provides=".remotecontent.IRemoteContentProvider"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+        
+    <plone:behavior
+        title="Web URLs"
+        description="Web URLs schema for SocieteSavante, Revue, etc."
+        provides=".urls.IWebURLs"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+    <plone:behavior
+        title="Social Media"
+        description="Social Media schema for SocieteSavante, Revue, etc."
+        provides=".social.ISocialMedia"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+    <plone:behavior
+        title="Notes and Comments"
+        description="Notes and Comments schema for all our types."
+        provides=".notes.INotes"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+    <plone:behavior
+        title="Rating"
+        description="Rating schema for all our types."
+        provides=".rating.IRating"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+        
+    <plone:behavior
+        title="Attachments"
+        description="Attachments schema for all our types."
+        provides=".attachments.IAttachments"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+
+    <plone:behavior
+        title="Related items"
+        description="Adds the ability to assign related items"
+        provides=".related.IRelatedItems"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+    <plone:behavior
+        title="Related Organization"
+        description="Related Organization for several content types"
+        provides=".related.IRelatedHealthOrganization"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+        
+    <plone:behavior
+        title="Contact people information"
+        description="Contact people information for SocieteSavante, Revue, etc."
+        provides=".contactinfo.IContactInformation"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+
+
+
+
+</configure>

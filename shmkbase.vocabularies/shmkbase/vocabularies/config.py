@@ -1,0 +1,72 @@
+
+
+# 
+# GUIDELINE_CATEGORY_ITEMS= [
+# u'Health Risk Assessment',
+# u'Therapeutic',
+# 
+#     ]
+    
+    
+SPECIALITY_ITEMS = [
+u'Alcohol & Alcohology',
+u'Allergy & Immunology',
+u'Andrology',
+u'Anesthesiology',
+u'Cardiovascular',
+u'Critical Care',
+u'Dermatology',
+u'Diabetes & Endocrinology',
+u'Emergency Medicine',
+u'Epidemiology',
+u'Gastroenterology',
+u'General/Family Medecine',
+u'Genetics',
+u'Geriatrics',
+u'Health Economics',
+u'Health Management',
+u'Hematology',
+u'HIV/AIDS & Sexually Transmitted Disease',
+u'Infectious Disease Medicine',
+u'Internal Medicine',
+u'Nephrology',
+u'Neurology',
+u'Nutrition & Dietetic',
+u'''Obstetrics/Gynecology & Women's Health''',
+u'Oncology',
+u'Ophtalmology',
+u'Orthopaedics',
+u'Osteopathic Medicine',
+u'Otolaryngology',
+u'Oxidative Stress',
+u'Pain Management',
+u'Pathology & Lab Medicine',
+u'Pharmacology & Pharmacy',
+u'Pediatrics',
+u'Preventive Medicine',
+u'Primary Care',
+u'Psychiatry & Mental Health',
+u'Public Health & Prevention',
+u'Pulmonology',
+u'Radiology',
+u'Regenarative Medicine',
+u'Rehabilitation',
+u'Reproductive Medicine',
+u'Rheumatology',
+u'Sexual Medicine',
+u'Sports Medicine & Exercise/Physical Activity',
+u'Sleep Medicine',
+u'Surgery',
+u'Plastic Surgery',
+u'Telemedicine',
+u'Tobacco & Tobaccology',
+u'Transplantation',
+u'Traumatology',
+u'Travel Medicine',
+u'Urology',
+u'Worksite Health Management & Occupational Medicine',
+u'Weight Management & Obesity & Bariatric Medecine',
+
+]
+
+

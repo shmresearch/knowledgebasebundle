@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+  <body>
+    
+<style type="text/css" >
+  #weburls fieldset {
+  				border-top: 1px solid #cccccc;
+                border-left: 1px solid #cccccc;
+                border-right: 1px solid #cccccc;
+                border-bottom: 1px solid #cccccc;
+  }
+</style>
+
+<div id="weburls"
+         tal:define="weburls view/weburl_items"
+         tal:condition="weburls">
+         
+<fieldset >
+   <legend i18n:translate="" >Web URLs</legend>
+   
+        <div tal:repeat="weburl weburls">
+              <a href=""
+                 class=""
+                 target="_blank"
+                 tal:attributes="href weburl/url;
+                                 title weburl/description;"
+                 tal:content="weburl/name">
+                URL
+              </a>
+        </div>
+
+</fieldset >
+</div>
+
+  </body>
+</html>

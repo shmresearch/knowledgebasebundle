@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    i18n_domain="shmresearch.knowledgebase">
+      
+  <!-- interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="shmresearch.knowledgebase base theme"
+      / -->
+      
+  <!-- Registration of z3c.jbot aware directory-->
+  <!--
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="jbot"
+      layer=".interfaces.IThemeSpecific" /> -->
+      
+
+</configure>

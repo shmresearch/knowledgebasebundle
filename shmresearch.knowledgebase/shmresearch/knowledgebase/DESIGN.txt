@@ -1,0 +1,39 @@
+
+Design notes
+------------
+
+- Principaux types de contenus :
+
+  Les principaux types contiennent des RemoteFolder contenant des Documents peuplés par les contenus provenant des flux RSS.
+    
+  - Organization (Container + Flux RSS) -- OK
+    - Peut contenir des Revues. (OK)    
+    - Contient des Guidelines.
+    - Contient des Events/Congres.
+    
+  - Revue (Container + Flux RSS)  -- OK
+    - Contient des Guidelines.
+
+  - Article -- built after the RSS content + additional info + optional publication file.
+
+  - Breaking News (NITF Article)
+
+  - Guideline
+  
+  - Cutoff Values Article
+    - Type : "issu d'un Guideline" or "issu d'un Article"
+    - Categories : Health assessmnt, Thérapeutique, Posologie, etc...
+    - Source : Société Savante ou Organisation (ou SHM) qui a produit
+    - Texte
+  
+  - Congrès/Event (plone.app.event)
+  
+- Organisation de l'information / Rubriques :
+
+  - Conteneur des sociétés savantes -> Société savante.
+  
+  - Conteneur des revues -> Revue.
+  
+  - Chaque spécialité est un dossier virtuel => Collection qui affiche la liste des sociétés savantes et revues.
+  
+- Navigation et Recherche.
